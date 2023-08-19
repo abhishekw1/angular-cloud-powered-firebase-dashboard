@@ -25,3 +25,32 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Firebase Setup
+
+The Firebase Command Line Interface (CLI) Tools can be used to test, manage, and deploy your Firebase project from the command line.
+Run `npm install -g firebase-tools`
+
+Run `firebase login` and your browser will open then login and allow to cli access
+
+Run `firebase projects:list`
+
+Run `npm install @angular/fire firebase@9.16.0 --legacy-peer-deps`
+
+## tsconfig.json setup
+Without this flag, TypeScript will allow you to use the dot syntax to access fields which are not defined:
+
+Make sure to set following properties to false in tsconfig.json file:
+
+```"compilerOptions": {
+ ...
+ ...
+   "strict": false,
+   "noPropertyAccessFromIndexSignature": false,
+ ...
+ ...
+},
+  "angularCompilerOptions": {
+    "strictTemplates": false
+  }```

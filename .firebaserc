@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-dashboard-63dc8": {
+      "hosting": {
+        "angular-cloud-powered-firebase-dashboard": [
+          "angular-dashboard-63dc8"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-dashboard-63dc8"
+  }
+}

@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
+import { AuthService } from './core/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'angular-cloud-powered-firebase-dashboard';
+  title = 'ACPFirebaseDashboard';
+
+  constructor(private authService: AuthService) {}
+
+  logout() {
+    this.authService.logout();
+  }
+  isLoggedIn() {
+    return this.authService.isLoggedIn;
+  }
 }

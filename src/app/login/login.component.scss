@@ -1,0 +1,14 @@
+.loading {
+  opacity: 0.5;
+}
+.spinner-border {
+  position: absolute;
+  top: 120px;
+}
+.btn-weight {
+  font-weight: 600;
+}
+
+.btn {
+  @extend .btn-weight;
+}
